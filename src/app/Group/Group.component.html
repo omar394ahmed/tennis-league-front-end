@@ -1,0 +1,21 @@
+<button type="button" (click)="group()" class="btn btn-primary btn-lg btn-block">Add participant to groups</button>
+
+<br><br>
+<ul class="nested">
+  <ng-container *ngFor="let item of groups">
+
+
+    <li><i class="fas fa-angle-right rotate"></i>
+      <span><i class="far fa-calendar-alt ic-w mx-1"></i><strong>Group {{item.enumeration}}</strong></span>
+      <ng-container *ngIf="item.participants">
+        <ul class="nested">
+
+          <li *ngFor="let item of item.participants"><i class="far fa-clock ic-w mr-1"></i>{{item}}</li>
+
+        </ul>
+
+      </ng-container>
+    </li>
+  </ng-container>
+
+</ul>

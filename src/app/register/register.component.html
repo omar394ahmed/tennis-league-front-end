@@ -1,0 +1,9 @@
+<form class="row g-3">
+  <div class="col-auto">
+    <label for="inputPassword2" class="visually-hidden">Name</label>
+    <input [(ngModel)]="participantName"  #name  class="form-control" id="inputPassword2" [ngModelOptions]="{standalone: true}" >
+  </div>
+  <div class="col-auto">
+    <button type="button" (click)="addParticipant(name.value)" class="btn btn-primary mb-3">Request to participate</button>
+  </div>
+</form>
